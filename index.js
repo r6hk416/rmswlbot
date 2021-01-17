@@ -34,7 +34,7 @@ client.on("message", (message) => {
   if (message.author.bot) return
 
   if (message.content == "ping") {
-    return message.reply("pong")
+    return message.reply("봉쇄")
   }
 
   if (message.content == "!근찌정보") {
@@ -101,6 +101,11 @@ client.on("message", (message) => {
     .addField("규칙:5", "불편한 행동, 말 자제해주세요")
 
     message.channel.send(embed)
+  }
+
+  if (message.content == "!봉쇄") {
+    let img = "https://cdn.discordapp.com/attachments/756326812841279572/790565372632760330/38e2f8f8445ec57636e6f2133228ee5d32d5aa316f3afc85afa8e4ae8c24f63d9d3b2a60945a776682941e178cad6a8f64dc.png"
+    let embed = new Discord.MessageEmbed()
   }
   
   else if (message.content == "!도움말") {
